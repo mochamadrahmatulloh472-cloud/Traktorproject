@@ -8,7 +8,7 @@
         * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Roboto, sans-serif;}
         :root {--hijau:#2e7d32; --hijaumuda:#81c784; --kuning:#ffc107; --putih:#ffffff; --abu:#f5f5f5; --teks:#37474f;}
         html {scroll-behavior:smooth;}
-        body {background:var(--abu); color:var(--teks); line-height:1.7; padding-bottom:40px;}
+        body {background:var(--abu); color:var(--teks); line-height:1.7; padding-bottom:60px;}
         
         /* HEADER */
         header {background:linear-gradient(135deg, var(--hijau), #388e3c); color:var(--putih); padding:35px 20px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.15);} 
@@ -54,16 +54,13 @@
         .sukses {background:#e6fffa; border-left:5px solid #00bfa5; padding:clamp(12px, 3vw, 18px); border-radius:8px; margin:15px 0; font-size:clamp(0.9em, 2.8vw, 1em);} 
         
         /* TOMBOL & FOOTER */
-        .tombol {display:inline-block; background:var(--hijau); color:white; padding:clamp(10px, 3vw, 14px) clamp(20px, 5vw, 28px); border-radius:8px; text-decoration:none; font-weight:600; margin[...]}
+        .tombol {display:inline-block; background:var(--hijau); color:white; padding:clamp(10px, 3vw, 14px) clamp(20px, 5vw, 28px); border-radius:8px; text-decoration:none; font-weight:600; margin-top:12px;}
         .tombol:hover {background:#1b5e20;} 
         footer {text-align:center; margin-top:40px; padding:20px; color:#666; font-size:clamp(0.8em, 2.5vw, 0.9em); border-top:1px solid #ddd;} 
 
-        /* WhatsApp floating button */
+        /* WhatsApp floating button + quick menu */
+        .wa-wrapper {position: fixed; right: 18px; bottom: 18px; z-index: 9999; display:flex; flex-direction:column; gap:10px; align-items:flex-end;}
         .wa-float {
-          position: fixed;
-          right: 18px;
-          bottom: 18px;
-          z-index: 9999;
           background: #25D366;
           color: white;
           width: 56px;
@@ -74,8 +71,29 @@
           justify-content:center;
           box-shadow: 0 6px 18px rgba(37,211,102,0.35);
           text-decoration: none;
+          border: none;
+          cursor: pointer;
         }
+        .wa-float:focus {outline:3px solid rgba(37,211,102,0.25);}
         .wa-float svg {width:26px; height:26px; fill:white;}
+
+        .wa-menu {
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+          padding:8px; 
+          display:none;
+          flex-direction:column;
+          gap:8px;
+          min-width:220px;
+        }
+        .wa-menu.show {display:flex;}
+        .wa-menu a {display:flex; gap:10px; align-items:center; padding:8px 10px; text-decoration:none; color:var(--teks); border-radius:8px;}
+        .wa-menu a:hover, .wa-menu a:focus {background:#f1fdf6;}
+        .wa-menu .label {font-weight:700; color:var(--hijau);}
+        .wa-note {font-size:0.9rem; color:#555; padding:6px 10px;}
+
+        @media (prefers-reduced-motion: reduce) { .kotak, .wa-menu {transition:none;} }
 
     </style>
 </head>
@@ -98,7 +116,7 @@
 <div class="wadah">
     <div class="kotak" id="tentang">
         <h2>📋 Tentang Proyek Ini</h2>
-        <p>Alat pertanian ringan dirancang khusus untuk membajak lahan sempit, kebun, sawah petak kecil, dan perkebunan campuran. Dibuat sepenuhnya menggunakan komponen mudah didapat di sekitar ki[...]</p>
+        <p>Alat pertanian ringan dirancang khusus untuk membajak lahan sempit, kebun, sawah petak kecil, dan perkebunan campuran. Dibuat sepenuhnya menggunakan komponen mudah didapat di sekitar kita, [...]</p>
         <br>
         <p>Desain disesuaikan persis dengan permintaanmu:</p>
         <ul>
@@ -186,16 +204,83 @@
 
 <footer>
     <p>© 2026 Proyek Traktor Mini Mandiri by endebeny | Desain & Pengembangan Bersama ENDEBENY</p>
-    <p>Kontak: WhatsApp <a href="https://wa.me/6285721439894?text=Halo%2C%20saya%20tertarik%20dengan%20Traktor%20Mini%20Anda" target="_blank" rel="noopener noreferrer">0857-2143-9894</a> • Email <a href="mailto:endebeny1998@gmail.com">endebeny1998@gmail.com</a></p>
+    <p>Kontak: WhatsApp <a href="https://wa.me/6285721439894?text=Halo%2C%20saya%20tertarik%20dengan%20Traktor%20Mini%20Anda" target="_blank" rel="noopener noreferrer">+62 857-2143-9894</a> • <a href="tel:+6285721439894">Telepon</a> • Email <a href="mailto:endebeny1998@gmail.com">endebeny1998@gmail.com</a></p>
 </footer>
 
-<!-- WhatsApp floating button (langsung membuka chat) -->
-<a class="wa-float" href="https://wa.me/6285721439894?text=Halo%2C%20saya%20tertarik%20dengan%20Traktor%20Mini%20Anda" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M20.52 3.48A11.87 11.87 0 0012 .03 11.9 11.9 0 001.91 8.59c-.7 2.4-.12 5.05 1.56 7.06L.03 24l8.73-3.24a11.87 11.87 0 004.28.84h.01c6.6 0 11.99-5.32 11.98-11.92a11.8 11.8 0 00-3.51-8.4zM12 21.5a9.35 9.35 0 01-3.81-.79l-.27-.15-5.2 1.93 1.05-4.78-.17-.29A9.43 9.43 0 012.6 8.6 9.5 9.5 0 0112 3.05c5.22 0 9.45 4.24 9.46 9.46 0 5.23-4.24 9.47-9.46 9.49z"/>
-    <path d="M17.1 14.13c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15s-.73.94-.9 1.13c-.17.19-.34.21-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.74-1.44-1.66-1.61-1.95-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48l-.54-.01c-.18 0-.47.07-.72.34-.25.27-.97.95-.97 2.32 0 1.36.99 2.68 1.12 2.87.13.19 1.93 3.05 4.67 4.28 3.24 1.43 3.24 0 3.82-.92.6-.92.6-1.71.42-1.88-.18-.17-.33-.27-.62-.42z"/>
-  </svg>
-</a>
+<!-- WhatsApp floating button + quick menu -->
+<div class="wa-wrapper">
+  <div class="wa-menu" id="waMenu" role="menu" aria-label="Pilihan kontak WhatsApp">
+    <a href="https://wa.me/6285721439894?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Traktor%20Mini." target="_blank" rel="noopener noreferrer" role="menuitem">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M20.52 3.48A11.87 11.87 0 0012 .03 11.9 11.9 0 001.91 8.59c-.7 2.4-.12 5.05 1.56 7.06L.03 24l8.73-3.24a11.87 11.87 0 004.28.84h.01c6.6 0 11.99-5.32 11.98-11.92a11.8 11.8 0 00-3.51-8.4z"/></svg>
+      <span class="label">Info</span>
+      <span style="margin-left:auto;color:#666;font-size:0.95rem;">Tanya produk</span>
+    </a>
+    <a href="https://wa.me/6285721439894?text=Halo%2C%20saya%20ingin%20memesan%2Ftrial%20Traktor%20Mini%20%E2%80%94%20mohon%20info%20harga%20%26%20pengiriman." target="_blank" rel="noopener noreferrer" role="menuitem">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M20.52 3.48A11.87 11.87 0 0012 .03 11.9 11.9 0 001.91 8.59c-.7 2.4-.12 5.05 1.56 7.06L.03 24l8.73-3.24a11.87 11.87 0 004.28.84h.01c6.6 0 11.99-5.32 11.98-11.92a11.8 11.8 0 00-3.51-8.4z"/></svg>
+      <span class="label">Order</span>
+      <span style="margin-left:auto;color:#666;font-size:0.95rem;">Pesan / Trial</span>
+    </a>
+    <div class="wa-note">Atau hubungi langsung: <a href="tel:+6285721439894">+62 857-2143-9894</a></div>
+  </div>
+
+  <button class="wa-float" id="waToggle" aria-haspopup="true" aria-controls="waMenu" aria-expanded="false" aria-label="Buka menu WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.52 3.48A11.87 11.87 0 0012 .03 11.9 11.9 0 001.91 8.59c-.7 2.4-.12 5.05 1.56 7.06L.03 24l8.73-3.24a11.87 11.87 0 004.28.84h.01c6.6 0 11.99-5.32 11.98-11.92a11.8 11.8 0 00-3.51-8.4zM12 21.5a9.35 9.35 0 01-3.81-.79l-.27-.15-5.2 1.93 1.05-4.78-.17-.29A9.43 9.43 0 012.6 8.6 9.5 9.5 0 0112 3.05c5.22 0 9.45 4.24 9.46 9.46 0 5.23-4.24 9.47-9.46 9.49z"/>
+      <path d="M17.1 14.13c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15s-.73.94-.9 1.13c-.17.19-.34.21-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.74-1.44-1.66-1.61-1.95-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48l-.54-.01c-.18 0-.47.07-.72.34-.25.27-.97.95-.97 2.32 0 1.36.99 2.68 1.12 2.87.13.19 1.93 3.05 4.67 4.28 3.24 1.43 3.24 0 3.82-.92.6-.92.6-1.71.42-1.88-.18-.17-.33-.27-.62-.42z"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  (function(){
+    var waToggle = document.getElementById('waToggle');
+    var waMenu = document.getElementById('waMenu');
+
+    function closeMenu(){
+      waMenu.classList.remove('show');
+      waToggle.setAttribute('aria-expanded','false');
+    }
+    function openMenu(){
+      waMenu.classList.add('show');
+      waToggle.setAttribute('aria-expanded','true');
+    }
+
+    waToggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      if (waMenu.classList.contains('show')) { closeMenu(); }
+      else { openMenu(); }
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', function(e){
+      if (!waMenu.contains(e.target) && e.target !== waToggle) closeMenu();
+    });
+
+    // close on escape
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+
+    // make menu items keyboard-friendly
+    var items = waMenu.querySelectorAll('a[role="menuitem"]');
+    items.forEach(function(it){ it.setAttribute('tabindex','0'); });
+  })();
+</script>
+
+<!-- Structured data (ContactPoint) for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Traktor Mini - ENDEBENY",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+6285721439894",
+    "contactType": "customer service",
+    "areaServed": "ID",
+    "availableLanguage": ["Indonesian","English"]
+  }],
+  "email": "mailto:endebeny1998@gmail.com"
+}
+</script>
 
 </body>
 </html>
