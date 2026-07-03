@@ -11,25 +11,25 @@
         body {background:var(--abu); color:var(--teks); line-height:1.7; padding-bottom:40px;}
         
         /* HEADER */
-        header {background:linear-gradient(135deg, var(--hijau), #388e3c); color:var(--putih); padding:35px 20px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+        header {background:linear-gradient(135deg, var(--hijau), #388e3c); color:var(--putih); padding:35px 20px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.15);} 
         header h1 {font-size:clamp(1.4em, 5vw, 2em); margin-bottom:8px;}
         header p {font-size:clamp(0.9em, 3vw, 1.1em); opacity:0.95;}
         
         /* NAVIGASI RESPONSIF */
         .navigasi {background:var(--putih); position:sticky; top:0; z-index:99; box-shadow:0 2px 8px rgba(0,0,0,0.1); padding:10px 0; text-align:center; overflow-x:auto; white-space:nowrap;}
-        .navigasi a {display:inline-block; color:var(--hijau); font-weight:600; margin:0 clamp(5px, 2vw, 12px); padding:8px 2px; text-decoration:none; font-size:clamp(0.8em, 2.5vw, 0.95em);}
-        .navigasi a:hover {color:#1b5e20; border-bottom:2px solid var(--kuning);}
+        .navigasi a {display:inline-block; color:var(--hijau); font-weight:600; margin:0 clamp(5px, 2vw, 12px); padding:8px 2px; text-decoration:none; font-size:clamp(0.8em, 2.5vw, 0.95em);} 
+        .navigasi a:hover {color:#1b5e20; border-bottom:2px solid var(--kuning);} 
         
         /* WADAH UTAMA OTOMATIS */
-        .wadah {max-width:950px; margin:25px auto; padding:0 clamp(10px, 3vw, 20px);}
-        .kotak {background:var(--putih); padding:clamp(15px, 4vw, 25px); margin-bottom:22px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.08); transition:0.3s;}
-        .kotak:hover {transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.1);}
+        .wadah {max-width:950px; margin:25px auto; padding:0 clamp(10px, 3vw, 20px);} 
+        .kotak {background:var(--putih); padding:clamp(15px, 4vw, 25px); margin-bottom:22px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.08); transition:0.3s;} 
+        .kotak:hover {transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.1);} 
         
-        h2 {color:var(--hijau); margin-bottom:18px; padding-bottom:8px; border-bottom:3px solid var(--hijaumuda); display:flex; align-items:center; gap:8px; font-size:clamp(1.2em, 4vw, 1.5em);}
-        h3 {color:#4e7a4f; margin:15px 0 10px; font-size:clamp(1em, 3vw, 1.2em);}
+        h2 {color:var(--hijau); margin-bottom:18px; padding-bottom:8px; border-bottom:3px solid var(--hijaumuda); display:flex; align-items:center; gap:8px; font-size:clamp(1.2em, 4vw, 1.5em);} 
+        h3 {color:#4e7a4f; margin:15px 0 10px; font-size:clamp(1em, 3vw, 1.2em);} 
         
         /* ✨ GALERI GAMBAR SUDAH SIAP */
-        .galeri {display:grid; grid-template-columns:repeat(auto-fit, minmax(clamp(180px, 45vw, 250px), 1fr)); gap:15px; margin-top:15px;}
+        .galeri {display:grid; grid-template-columns:repeat(auto-fit, minmax(clamp(180px, 45vw, 250px), 1fr)); gap:15px; margin-top:15px;} 
         .gambar-desain {
             width: 100%;
             height: auto;
@@ -40,23 +40,43 @@
         }
         
         /* TABEL BISA DIGESER DI HP */
-        .bungkus-tabel {overflow-x:auto; margin:15px 0;}
-        .tabel {width:100%; min-width:600px; border-collapse:collapse;}
-        .tabel th, .tabel td {border:1px solid #ddd; padding:clamp(8px, 2vw, 12px); text-align:left; font-size:clamp(0.85em, 2.5vw, 0.95em);}
-        .tabel th {background:var(--hijau); color:white;}
-        .tabel tr:nth-child(even) {background:#f9f9f9;}
+        .bungkus-tabel {overflow-x:auto; margin:15px 0;} 
+        .tabel {width:100%; min-width:600px; border-collapse:collapse;} 
+        .tabel th, .tabel td {border:1px solid #ddd; padding:clamp(8px, 2vw, 12px); text-align:left; font-size:clamp(0.85em, 2.5vw, 0.95em);} 
+        .tabel th {background:var(--hijau); color:white;} 
+        .tabel tr:nth-child(even) {background:#f9f9f9;} 
         
-        ul, ol {padding-left:clamp(20px, 5vw, 30px); margin:10px 0; font-size:clamp(0.9em, 2.8vw, 1em);}
-        li {margin:7px 0;}
+        ul, ol {padding-left:clamp(20px, 5vw, 30px); margin:10px 0; font-size:clamp(0.9em, 2.8vw, 1em);} 
+        li {margin:7px 0;} 
         
         /* CATATAN & INFO */
-        .catatan {background:#fffde7; border-left:5px solid var(--kuning); padding:clamp(12px, 3vw, 18px); border-radius:8px; margin-top:10px; font-size:clamp(0.9em, 2.8vw, 1em);}
-        .sukses {background:#e6fffa; border-left:5px solid #00bfa5; padding:clamp(12px, 3vw, 18px); border-radius:8px; margin:15px 0; font-size:clamp(0.9em, 2.8vw, 1em);}
+        .catatan {background:#fffde7; border-left:5px solid var(--kuning); padding:clamp(12px, 3vw, 18px); border-radius:8px; margin-top:10px; font-size:clamp(0.9em, 2.8vw, 1em);} 
+        .sukses {background:#e6fffa; border-left:5px solid #00bfa5; padding:clamp(12px, 3vw, 18px); border-radius:8px; margin:15px 0; font-size:clamp(0.9em, 2.8vw, 1em);} 
         
         /* TOMBOL & FOOTER */
-        .tombol {display:inline-block; background:var(--hijau); color:white; padding:clamp(10px, 3vw, 14px) clamp(20px, 5vw, 28px); border-radius:8px; text-decoration:none; font-weight:600; margin-top:10px; font-size:clamp(0.9em, 2.8vw, 1em); text-align:center;}
-        .tombol:hover {background:#1b5e20;}
-        footer {text-align:center; margin-top:40px; padding:20px; color:#666; font-size:clamp(0.8em, 2.5vw, 0.9em); border-top:1px solid #ddd;}
+        .tombol {display:inline-block; background:var(--hijau); color:white; padding:clamp(10px, 3vw, 14px) clamp(20px, 5vw, 28px); border-radius:8px; text-decoration:none; font-weight:600; margin[...]}
+        .tombol:hover {background:#1b5e20;} 
+        footer {text-align:center; margin-top:40px; padding:20px; color:#666; font-size:clamp(0.8em, 2.5vw, 0.9em); border-top:1px solid #ddd;} 
+
+        /* WhatsApp floating button */
+        .wa-float {
+          position: fixed;
+          right: 18px;
+          bottom: 18px;
+          z-index: 9999;
+          background: #25D366;
+          color: white;
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          box-shadow: 0 6px 18px rgba(37,211,102,0.35);
+          text-decoration: none;
+        }
+        .wa-float svg {width:26px; height:26px; fill:white;}
+
     </style>
 </head>
 <body>
@@ -78,7 +98,7 @@
 <div class="wadah">
     <div class="kotak" id="tentang">
         <h2>📋 Tentang Proyek Ini</h2>
-        <p>Alat pertanian ringan dirancang khusus untuk membajak lahan sempit, kebun, sawah petak kecil, dan perkebunan campuran. Dibuat sepenuhnya menggunakan komponen mudah didapat di sekitar kita, utamanya memanfaatkan mesin bekas motor bebek Honda Supra Fit yang tangguh dan irit.</p>
+        <p>Alat pertanian ringan dirancang khusus untuk membajak lahan sempit, kebun, sawah petak kecil, dan perkebunan campuran. Dibuat sepenuhnya menggunakan komponen mudah didapat di sekitar ki[...]</p>
         <br>
         <p>Desain disesuaikan persis dengan permintaanmu:</p>
         <ul>
@@ -165,8 +185,17 @@
 </div>
 
 <footer>
-    <p>© 2026 Proyek Traktor Mini Mandiri by endebeny| Desain & Pengembangan Bersama ENDEBENY</p>
+    <p>© 2026 Proyek Traktor Mini Mandiri by endebeny | Desain & Pengembangan Bersama ENDEBENY</p>
+    <p>Kontak: WhatsApp <a href="https://wa.me/6285721439894?text=Halo%2C%20saya%20tertarik%20dengan%20Traktor%20Mini%20Anda" target="_blank" rel="noopener noreferrer">0857-2143-9894</a> • Email <a href="mailto:endebeny1998@gmail.com">endebeny1998@gmail.com</a></p>
 </footer>
+
+<!-- WhatsApp floating button (langsung membuka chat) -->
+<a class="wa-float" href="https://wa.me/6285721439894?text=Halo%2C%20saya%20tertarik%20dengan%20Traktor%20Mini%20Anda" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20.52 3.48A11.87 11.87 0 0012 .03 11.9 11.9 0 001.91 8.59c-.7 2.4-.12 5.05 1.56 7.06L.03 24l8.73-3.24a11.87 11.87 0 004.28.84h.01c6.6 0 11.99-5.32 11.98-11.92a11.8 11.8 0 00-3.51-8.4zM12 21.5a9.35 9.35 0 01-3.81-.79l-.27-.15-5.2 1.93 1.05-4.78-.17-.29A9.43 9.43 0 012.6 8.6 9.5 9.5 0 0112 3.05c5.22 0 9.45 4.24 9.46 9.46 0 5.23-4.24 9.47-9.46 9.49z"/>
+    <path d="M17.1 14.13c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15s-.73.94-.9 1.13c-.17.19-.34.21-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.74-1.44-1.66-1.61-1.95-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48l-.54-.01c-.18 0-.47.07-.72.34-.25.27-.97.95-.97 2.32 0 1.36.99 2.68 1.12 2.87.13.19 1.93 3.05 4.67 4.28 3.24 1.43 3.24 0 3.82-.92.6-.92.6-1.71.42-1.88-.18-.17-.33-.27-.62-.42z"/>
+  </svg>
+</a>
 
 </body>
 </html>
